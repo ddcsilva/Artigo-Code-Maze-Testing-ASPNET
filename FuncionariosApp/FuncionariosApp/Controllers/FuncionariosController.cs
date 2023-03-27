@@ -11,10 +11,10 @@ public class FuncionariosController : Controller
     private readonly IFuncionarioRepository _funcionarioRepository;
     private readonly NumeroContaValidation _numeroContaValidation;
 
-    public FuncionariosController(IFuncionarioRepository funcionarioRepository, NumeroContaValidation numeroContaValidation)
+    public FuncionariosController(IFuncionarioRepository funcionarioRepository)
     {
         _funcionarioRepository = funcionarioRepository;
-        _numeroContaValidation = numeroContaValidation;
+        _numeroContaValidation = new NumeroContaValidation();
     }
 
     public IActionResult Index()
